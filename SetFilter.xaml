@@ -1,0 +1,6 @@
+﻿<Window x:Class="FreeFilterWPF.SetFilter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SetFilter" Height="230" Width="230" ResizeMode="NoResize">
+    <Grid></Grid>
+</Window>

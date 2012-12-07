@@ -1,0 +1,30 @@
+﻿<Window x:Class="FreeFilterWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Loaded="Window_Loaded" ResizeMode="CanResize" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="710" SizeToContent="Height" Width="712">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo x:Name="taskbarItemInfo" ProgressState="Normal"/>
+    </Window.TaskbarItemInfo>
+    
+    <Grid Width="697">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*" />
+            <ColumnDefinition Width="677*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Apply filter" Height="25" HorizontalAlignment="Left" Margin="0,29,0,0" Name="btnApplyFilter" VerticalAlignment="Top" Width="74" Click="btnApplyFilter_Click" UseLayoutRounding="True" IsEnabled="False" Grid.Column="1" ToolTip="Press to filtering image"/>  
+        <Image Height="272" HorizontalAlignment="Stretch" Margin="14,53,348,0" Name="image1" Stretch="Uniform" VerticalAlignment="Stretch" Width="316" Grid.Column="1" ToolTip="Original image" />
+        <Image Height="272" HorizontalAlignment="Stretch" Margin="336,53,26,0" Name="image2" Stretch="Uniform" VerticalAlignment="Stretch" Width="316" Grid.Column="1" ToolTip="Filtered image" />
+        <ProgressBar Height="23" HorizontalAlignment="Left" Margin="81,29,0,0" Name="progressBar1" VerticalAlignment="Top" Width="584" UseLayoutRounding="True" Grid.Column="1" ToolTip="Progress of the filtering image" />
+        <Menu Height="23" Name="menu1" Grid.ColumnSpan="2" ClipToBounds="False" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Width="668">
+            <MenuItem Header="File" Name="MenItemName">
+                <MenuItem Header="Open" Click="ItemOpen_Click" Name="menuItemOpen"/>
+                <MenuItem Header="Save" Click="MenuItem_Click" Name="menuItemSave" IsEnabled="False" />
+                <MenuItem Header="Close" Click="ItemClose_Click" Name="menuItemClose" IsEnabled="False"/>
+                <MenuItem Header="Exit" Click="MenuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Filter">
+                <MenuItem Header="Set filter" Click="MenuItem_Click_1"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
